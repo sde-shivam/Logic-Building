@@ -58,9 +58,36 @@ class Main {
         System.out.print("Decimal of binary number "+myNumber+" is = "+decNumber);
        }
 
+         // Decimal to binary conversion--------->
+            public static void decToBin(int num){
+                int pow=0;
+                int binNum=0;
+              while(num>0){
+                int rem = num % 2;
+                binNum = binNum +( rem * (int)Math.pow(10,pow));
+                pow++;
+                num=num/2;
+              }
+        System.out.print("Binary of Decimal number is = "+binNum);
+            }
+
+          //Hollow Rectangle pattern-------------->
+        public static void hollowRect(int row,int column){
+        for(int i=1;i<=row;i++){
+            for(int j=1;j<=column;j++){
+                if(i==1 || i==row || j==1 || j==column) {
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+        }
+
         public static void main (String args[]){
 
-            binaryToDecimal(10001);
+            hollowRect(6,20);
 
         }
     }
