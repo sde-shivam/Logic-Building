@@ -43,9 +43,24 @@ class Main {
         }
     }
 
+         // Binary to decimal convertion---->
+       public static void binaryToDecimal(int binNum){
+        int myNumber = binNum;
+        int decNumber = 0;
+        int pow = 0;
+        while(binNum>0){
+            int lastDigit = binNum % 10;
+            decNumber = lastDigit *(int)Math.pow(2,pow);
+            pow++;
+            binNum = binNum/10;
+
+        }
+        System.out.print("Decimal of binary number "+myNumber+" is = "+decNumber);
+       }
+
         public static void main (String args[]){
 
-            primeinRange(30);
+            binaryToDecimal(10001);
 
         }
     }
