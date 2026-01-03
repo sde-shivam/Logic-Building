@@ -135,9 +135,97 @@ class Main {
                 System.out.println();
             }
         }
+
+        //Butterfly pattern ---------------------->
+        public static void butterflyPtrn(int n){
+        for(int i=1;i<=n;i++){
+               //stars--->n
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+               //spaces---->2*(n-i)
+            for(int j=1;j<=2*(n-i);j++){
+                System.out.print(" ");
+            }
+               //stars--->n
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+            for(int i=n;i>=1;i--){
+                //stars--->n
+                for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+                //spaces---->2*(n-i)
+                for(int j=1;j<=2*(n-i);j++){
+                    System.out.print(" ");
+                }
+                //stars--->n
+                for(int j=1;j<=i;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+        // Solid Rhombus ------------>
+        public static void solidRhombus(int n){
+        for(int i=1;i<=n;i++){
+            //for spaces--->
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //for stars----->
+            for(int j=1;j<=n;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        }
+
+    // Hollow Rhombus ------------>
+    public static void hollowRhombus(int n) {
+        for (int i = 1; i <= n; i++) {
+            //for spaces--->
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            //for stars----->
+            for (int j = 1; j <= n; j++) {
+                if(i==1||i==n||j==1||j==n){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+         }
+         //Diamond pattern------------>
+        public static void diamond_pattern(int n){
+         for(int i=1;i<=n;i++){
+             for(int j=1;j<=n-i;j++){
+                 System.out.print(" ");
+             }
+             for(int j=1;j<=(2*i-1);j++){
+                 System.out.print("*");
+             }
+             System.out.println();
+         }
+            for(int i=n;i>=1;i--){
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=(2*i-1);j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
         public static void main (String args[]){
 
-            binTriangle(5);
+            diamond_pattern(8);
 
         }
     }
