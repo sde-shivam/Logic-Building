@@ -223,9 +223,28 @@ class Main {
                 System.out.println();
             }
         }
+        //Print the Reverse number ----------------->
+       public static void reverseNum(int num){
+        while(num>0){
+            int last_digit = num % 10;
+            System.out.print(last_digit);
+            num =num / 10;
+        }
+
+       }
+        //Reverse the original number-------------->
+    public static void reverseOgNum(int num){
+        int rev=0;
+        while(num>0){
+            int last_digit = num % 10;
+            rev = (rev * 10)+ last_digit;
+            num =num / 10;
+        }
+        System.out.print(rev);
+    }
         public static void main (String args[]){
 
-            diamond_pattern(8);
+            reverseOgNum(12343232);
 
         }
     }
