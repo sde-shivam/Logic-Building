@@ -242,9 +242,19 @@ class Main {
         }
         System.out.print(rev);
     }
+        //Bigger in 3 numbers--------------------->
+       public static void bigNum(int a,int b, int c){
+        if(a>b && a>c){
+            System.out.print("A is bigger");
+        }else if(b>c){
+            System.out.print("B is bigger");
+        }else{
+            System.out.print("c is bigger");
+        }
+       }
         public static void main (String args[]){
 
-            reverseOgNum(12343232);
+            bigNum(0,31,49);
 
         }
     }
