@@ -273,8 +273,21 @@ class Main {
          int result = linearSearch(arr,target);
          System.out.print("Target is at index : "+ result); */
 
-
+    //Linear search in array more than 1 same target index---------------->
+    public static void linearSearch2(int arr[],int target){
+        List<Integer>Result =new ArrayList<>();
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+               Result.add(i) ;
+            }
+        }
+        System.out.print(Result);
+    }
+      /* int arr[]={3,20,10,40,10};
+                int target =10;
+             linearSearch2(arr,target);  */
     public static void main (String args[]){
+
 
     }
 
