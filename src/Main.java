@@ -252,12 +252,34 @@ class Main {
             System.out.print("c is bigger");
         }
        }
-        public static void main (String args[]){
+       //Update array by argument ------------------->
+       public static void updateArr(int marks[]){
+         for(int i=0;i<marks.length;i++)
+             marks[i]=marks[i]+2;
+       }
 
-            bigNum(0,31,49);
+       //Linear search in array----------------> Complexity = O(n)
+      public static int linearSearch(int arr[],int target){
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==target){
+                return i;
+            }
+          }
+        return -1;
+      }
+      /* Main fn -------->
+       int arr[]={3,20,10,40,60};
+         int target =10;
+         int result = linearSearch(arr,target);
+         System.out.print("Target is at index : "+ result); */
+
+
+    public static void main (String args[]){
+
+    }
 
         }
-    }
+
 
 
 
