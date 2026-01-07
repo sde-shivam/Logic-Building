@@ -286,9 +286,32 @@ class Main {
       /* int arr[]={3,20,10,40,10};
                 int target =10;
              linearSearch2(arr,target);  */
+
+    //Largest Element in Array---------------->
+    public static int getLargest(int numbers[]){
+        int largest = Integer.MIN_VALUE; //----------For -infinity
+        for(int i=0;i<numbers.length;i++){
+            if(largest<numbers[i]){
+                largest=numbers[i];
+            }
+        }
+        return largest;
+    }
+
+    //Smallest Element in Array---------------->
+    public static int getSmallest(int numbers[]){
+        int smallest = Integer.MAX_VALUE; //----------For +infinity
+        for(int i=0;i<numbers.length;i++){
+            if(smallest>numbers[i]){
+                smallest=numbers[i];
+            }
+        }
+        return smallest;
+    }
     public static void main (String args[]){
-
-
+       int numbers[]={10,93,34,7,23,46,56};
+        int result = getSmallest(numbers);
+        System.out.print("Smallest number is - "+result);
     }
 
         }
