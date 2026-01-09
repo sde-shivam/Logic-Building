@@ -329,8 +329,32 @@ class Main {
         int result = binarySearch(numbers,key);
         System.out.print("Element present at index : "+result); */
 
-
+    //Reverse an array ----------------->
+    public static void reverseArr(int numbers[]){
+       for(int i=0;i<numbers.length;i++){
+          int start =0;  int end = numbers.length - 1;
+          while(start < end) {
+              //swap ------>
+              int temp = numbers[end];
+              numbers[end] = numbers[start];
+              numbers[start] = temp;
+              start++;
+              end--;
+          }
+       }
+    }
+       /*int numbers[] = {2,3,4,5,6,7,8};
+         reverseArr(numbers);
+         for(int i=0;i<numbers.length;i++){
+           System.out.print(numbers[i]+" ");
+        } */
+    //
     public static void main (String args[]){
+        int numbers[] = {2,3,4,5,6,7,8};
+        reverseArr(numbers);
+        for(int i=0;i<numbers.length;i++){
+            System.out.print(numbers[i]+" ");
+        }
 
     }
 
