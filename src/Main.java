@@ -361,7 +361,7 @@ class Main {
         }
         System.out.print("Number of pairs = "+tp);
     }
-    // Print the number of possible subarrays from an array------------>
+    // Print the number of possible subarrays from an array and their sum and min,max------------>
      public static void printSubArr(int numbers[]){
         int ts=0;
         int sum=0;
@@ -371,6 +371,7 @@ class Main {
             int start = i;
             for(int j=i;j<numbers.length;j++){
              int end = j;
+                 sum=0;
              for(int k=start;k<=end;k++){
                  System.out.print(numbers[k]+" ");
                  sum+=numbers[k]; //Sum
@@ -383,7 +384,7 @@ class Main {
              }
 
                 System.out.println("------>Sum : "+sum);
-                sum=0;
+
              ts++;
                 System.out.println();
             }
@@ -396,10 +397,29 @@ class Main {
      }
       /*int numbers[] = {2,4,6,8,10};
         printSubArr(numbers);*/
-
-
+     //Calculate the max sum of sub-array by Brute force method---->
+       public static void maxSum(int numbers[]){
+           int currSum=0;
+           int maxSum = Integer.MIN_VALUE;
+             for(int i=0;i<numbers.length;i++){
+               int start = i;
+               for(int j=i;j<numbers.length;j++){
+                   int end = j;
+                     currSum=0;
+                   for(int k=start;k<=end;k++){
+                       currSum+=numbers[k];
+                   }
+                   System.out.println("CurrSum : "+currSum);
+                   if(maxSum<currSum){
+                       maxSum=currSum;
+                   }
+               }
+           }
+           System.out.print("Max sum of sub-array : "+maxSum);
+       }
+       /*int numbers[]={1,2,3,4,5,6};
+        maxSum(numbers);*/
     public static void main (String args[]){
-
 
 
     }
