@@ -361,10 +361,45 @@ class Main {
         }
         System.out.print("Number of pairs = "+tp);
     }
+    // Print the number of possible subarrays from an array------------>
+     public static void printSubArr(int numbers[]){
+        int ts=0;
+        int sum=0;
+        int max=Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<numbers.length;i++){
+            int start = i;
+            for(int j=i;j<numbers.length;j++){
+             int end = j;
+             for(int k=start;k<=end;k++){
+                 System.out.print(numbers[k]+" ");
+                 sum+=numbers[k]; //Sum
+                 if(max<sum){   //max value
+                     max=sum;
+                 }
+                 if(min>sum){   //min value
+                     min=sum;
+                 }
+             }
+
+                System.out.println("------>Sum : "+sum);
+                sum=0;
+             ts++;
+                System.out.println();
+            }
+            System.out.println();
+        }
+         System.out.println("Minimum sum is  : "+min);
+         System.out.println("Maximum sum is  : "+max);
+         System.out.print("Total number of subarray : "+ts);
+
+     }
+      /*int numbers[] = {2,4,6,8,10};
+        printSubArr(numbers);*/
+
 
     public static void main (String args[]){
-        int numbers[] = {2,4,6,8,10};
-        printPairs(numbers);
+
 
 
     }
