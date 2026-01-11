@@ -419,8 +419,29 @@ class Main {
        }
        /*int numbers[]={1,2,3,4,5,6};
         maxSum(numbers);*/
-    public static void main (String args[]){
 
+    // Odd and Even numbers present in array----------------->
+     public static void numberArr(int numbers[]){
+         int even=0;
+         int odd = 0;
+         int max = Integer.MIN_VALUE;
+         for(int i=0;i<numbers.length;i++){
+             if(numbers[i]%2==0){
+                 ++even;
+             }else{
+                 ++odd;
+             }
+             if(max<numbers[i]){
+                 max=numbers[i];
+             }
+         }
+         System.out.println("Even : "+even);
+         System.out.println("Odd : "+odd);
+         System.out.println("Max value : "+max);
+     }
+    public static void main (String args[]){
+        int numbers[]={1,12,13,41,15,6,17};
+         numberArr(numbers);
 
     }
 
