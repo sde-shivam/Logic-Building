@@ -439,9 +439,24 @@ class Main {
          System.out.println("Odd : "+odd);
          System.out.println("Max value : "+max);
      }
+
+     //Find missing number in array --------------->
+     public static int missNum(int numbers[],int n){
+         for(int i=0;i<numbers.length-1;i++){
+             if(numbers[i+1]-numbers[i]!=1){
+                 return numbers[i]+1;
+             }
+             if( numbers[numbers.length - 1]!=n){
+                 return n;
+             }
+         }
+         return -1;
+     }
+     /*int numbers[]={1,2,3,4,6,7,8,9,10};
+        int n = 10;
+        int result = missNum(numbers,n);
+        System.out.println("Missing number is :"+result);*/
     public static void main (String args[]){
-        int numbers[]={1,12,13,41,15,6,17};
-         numberArr(numbers);
 
     }
 
