@@ -456,8 +456,28 @@ class Main {
         int n = 10;
         int result = missNum(numbers,n);
         System.out.println("Missing number is :"+result);*/
+
+    //move all 0 in array at last index------------->
+    public static void zeroAtLast(int num[]){
+        int pos=0;
+        for(int i=0;i<num.length;i++){
+            if(num[i]!=0){
+                num[pos]=num[i];
+                pos++;
+            }
+        }
+        while(pos<num.length){
+            num[pos]=0;
+            pos++;
+        }
+    }
+    /*int num[]={0,0,1,2,3,4};
+        zeroAtLast(num);
+        for(int i=0;i<num.length;i++){
+            System.out.print(num[i]);*/
     public static void main (String args[]){
 
+        }
     }
 
         }
