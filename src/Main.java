@@ -475,12 +475,27 @@ class Main {
         zeroAtLast(num);
         for(int i=0;i<num.length;i++){
             System.out.print(num[i]);*/
-    public static void main (String args[]){
 
+    //Even odd in array---------------->
+    public static void evenOdd(int num[]){
+        int even=0;
+        int odd=0;
+        for(int i=0;i<num.length;i++){
+            if(num[i]%2==0){
+                even++;
+            }else{
+                odd++;
+            }
+        }
+        System.out.println("Count of even numbers :"+ even );
+        System.out.print("Count of odd numbers :"+ odd );
+    }
+    public static void main (String args[]){
+          int num[]={1,2,3,4,5,6,7,8,9};
+          evenOdd(num);
         }
     }
 
-        }
 
 
 
