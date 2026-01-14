@@ -476,7 +476,7 @@ class Main {
         for(int i=0;i<num.length;i++){
             System.out.print(num[i]);*/
 
-    //Even odd in array---------------->
+    //Count of even & odd numbers in array---------------->
     public static void evenOdd(int num[]){
         int even=0;
         int odd=0;
@@ -490,9 +490,26 @@ class Main {
         System.out.println("Count of even numbers :"+ even );
         System.out.print("Count of odd numbers :"+ odd );
     }
+    //Majority element in array (Brute force)------->
+    public static int majorityEl(int num[]){
+        int n=num.length;
+        for(int i=0;i<n;i++){
+            int count =0;
+            for(int j=0;j<n;j++){
+                if(num[i]==num[j]){
+                    count++;
+                }
+            }
+            if(count>n/2){
+                return num[i];
+            }
+        }
+        return -1;
+    }
+         /*int num[]={1,2,2,3,2,4,2};
+         System.out.print(majorityEl(num));*/
     public static void main (String args[]){
-          int num[]={1,2,3,4,5,6,7,8,9};
-          evenOdd(num);
+
         }
     }
 
