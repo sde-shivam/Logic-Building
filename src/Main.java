@@ -508,9 +508,28 @@ class Main {
     }
          /*int num[]={1,2,2,3,2,4,2};
          System.out.print(majorityEl(num));*/
+    //missing and repete number -------------->
+    public static void findNum(int myNum[]){
+        Arrays.sort(myNum);
+        int repeat = -1;
+        int missing = -1;
+       for(int i=0;i<myNum.length-1;i++){
+               if(myNum[i+1]-myNum[i] > 1) {
+                    missing = myNum[i]+1;
+               }
+               if(myNum[i]==myNum[i+1]){
+                   repeat=myNum[i];
+
+           }
+       }
+        System.out.println("Missing number is - "+missing);
+        System.out.println("Repeat number - "+repeat);
+    }
+    /*int myNum[]={1,2,4,4,2,3,5,2,1};
+        findNum(myNum);
+        }*/
     public static void main (String args[]){
 
-        }
     }
 
 
