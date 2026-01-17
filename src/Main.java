@@ -1,7 +1,7 @@
 import java.util.*;
 class Main {
 
-      //Bionomial Function------->
+    //Bionomial Function------->
     static int fact(int n) {
         int f = 1;
         for (int i = 1; i <= n; i++) {
@@ -9,180 +9,184 @@ class Main {
         }
         return f;
     }
-       static int bionomialFact(int n,int r){
+
+    static int bionomialFact(int n, int r) {
         int n_fact = fact(n);
         int r_fact = fact(r);
-        int nmr_fact = fact(n-r);
-        int ncr = n_fact/(r_fact * nmr_fact);
+        int nmr_fact = fact(n - r);
+        int ncr = n_fact / (r_fact * nmr_fact);
         return ncr;
     }
 
-          //Check Prime Number or Not ------>
-        public static boolean isPrime(int n) {
-            boolean isPrime = true;
-            if(n==2){
-                return true;
-            }
-            for (int i = 2; i<=Math.sqrt(n); i++) {
-                if (n % i == 0) {
-                    return false;
-                }
-            }
+    //Check Prime Number or Not ------>
+    public static boolean isPrime(int n) {
+        boolean isPrime = true;
+        if (n == 2) {
             return true;
         }
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
-        // Prime number in Range ------->
+    // Prime number in Range ------->
 
-    public static void primeinRange(int n){
-        for(int i=2;i<n;i++){
+    public static void primeinRange(int n) {
+        for (int i = 2; i < n; i++) {
             boolean checkPrime = isPrime(i);
-            if(checkPrime){
-                System.out.print(i+",");
+            if (checkPrime) {
+                System.out.print(i + ",");
             }
         }
     }
 
-         // Binary to decimal convertion---->
-       public static void binaryToDecimal(int binNum){
+    // Binary to decimal convertion---->
+    public static void binaryToDecimal(int binNum) {
         int myNumber = binNum;
         int decNumber = 0;
         int pow = 0;
-        while(binNum>0){
+        while (binNum > 0) {
             int lastDigit = binNum % 10;
-            decNumber = lastDigit *(int)Math.pow(2,pow);
+            decNumber = lastDigit * (int) Math.pow(2, pow);
             pow++;
-            binNum = binNum/10;
+            binNum = binNum / 10;
 
         }
-        System.out.print("Decimal of binary number "+myNumber+" is = "+decNumber);
-       }
+        System.out.print("Decimal of binary number " + myNumber + " is = " + decNumber);
+    }
 
-         // Decimal to binary conversion--------->
-            public static void decToBin(int num){
-                int pow=0;
-                int binNum=0;
-              while(num>0){
-                int rem = num % 2;
-                binNum = binNum +( rem * (int)Math.pow(10,pow));
-                pow++;
-                num=num/2;
-              }
-        System.out.print("Binary of Decimal number is = "+binNum);
-            }
+    // Decimal to binary conversion--------->
+    public static void decToBin(int num) {
+        int pow = 0;
+        int binNum = 0;
+        while (num > 0) {
+            int rem = num % 2;
+            binNum = binNum + (rem * (int) Math.pow(10, pow));
+            pow++;
+            num = num / 2;
+        }
+        System.out.print("Binary of Decimal number is = " + binNum);
+    }
 
-          //Hollow Rectangle pattern-------------->
-        public static void hollowRect(int row,int column){
-        for(int i=1;i<=row;i++){
-            for(int j=1;j<=column;j++){
-                if(i==1 || i==row || j==1 || j==column) {
+    //Hollow Rectangle pattern-------------->
+    public static void hollowRect(int row, int column) {
+        for (int i = 1; i <= row; i++) {
+            for (int j = 1; j <= column; j++) {
+                if (i == 1 || i == row || j == 1 || j == column) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
-        }
-        //Inverted & Rotated half pyramid------------->
-        public static void invertRotatePyramid(int n) {
-            for (int i = 1; i <=n;i++){
-                for(int j=1;j<=n-i;j++) {
-                    System.out.print(" ");
-                }
-                for(int j=1;j<=i;j++){
-                    System.out.print("*");
-                }
-                System.out.println();
+    }
+
+    //Inverted & Rotated half pyramid------------->
+    public static void invertRotatePyramid(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
             }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
+    }
 
-        //Inverted half pyramid with numbers -------->
-        public static void invertedHalfPyramid(int n){
+    //Inverted half pyramid with numbers -------->
+    public static void invertedHalfPyramid(int n) {
 
-         for(int i=1;i<=n;i++){
-             for(int j=1;j<=n-i+1;j++){
-                 System.out.print(j);
-             }
-             for(int j=1;j<i;j++){
-                 System.out.print(" ");
-             }
-             System.out.println();
-         }
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(j);
+            }
+            for (int j = 1; j < i; j++) {
+                System.out.print(" ");
+            }
+            System.out.println();
         }
-        //Floyd's Triangle Pattern--------------------->
-        public static void floydTriangle(int n){
-        int num =1;
-        for(int i=1;i<=n;i++){
-            for(int j =1;j<=i;j++){
-                System.out.print(num+" ");
+    }
+
+    //Floyd's Triangle Pattern--------------------->
+    public static void floydTriangle(int n) {
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
                 num++;
             }
             System.out.println();
         }
-        }
+    }
 
-        //0-1 Triangle ------------------->
-        public static void binTriangle(int n){
-            for(int i=1;i<=n;i++){
-                for(int j =1;j<=i;j++){
-                    if((i+j)%2==0) {
-                        System.out.print("1 ");
-                    }else{
-                        System.out.print("0 ");
-                    }
+    //0-1 Triangle ------------------->
+    public static void binTriangle(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
                 }
-                System.out.println();
             }
+            System.out.println();
         }
+    }
 
-        //Butterfly pattern ---------------------->
-        public static void butterflyPtrn(int n){
-        for(int i=1;i<=n;i++){
-               //stars--->n
-            for(int j=1;j<=i;j++){
+    //Butterfly pattern ---------------------->
+    public static void butterflyPtrn(int n) {
+        for (int i = 1; i <= n; i++) {
+            //stars--->n
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
-               //spaces---->2*(n-i)
-            for(int j=1;j<=2*(n-i);j++){
+            //spaces---->2*(n-i)
+            for (int j = 1; j <= 2 * (n - i); j++) {
                 System.out.print(" ");
             }
-               //stars--->n
-            for(int j=1;j<=i;j++){
+            //stars--->n
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-            for(int i=n;i>=1;i--){
-                //stars--->n
-                for(int j=1;j<=i;j++){
-                    System.out.print("*");
-                }
-                //spaces---->2*(n-i)
-                for(int j=1;j<=2*(n-i);j++){
-                    System.out.print(" ");
-                }
-                //stars--->n
-                for(int j=1;j<=i;j++){
-                    System.out.print("*");
-                }
-                System.out.println();
+        for (int i = n; i >= 1; i--) {
+            //stars--->n
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
             }
+            //spaces---->2*(n-i)
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+            //stars--->n
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        // Solid Rhombus ------------>
-        public static void solidRhombus(int n){
-        for(int i=1;i<=n;i++){
+    }
+
+    // Solid Rhombus ------------>
+    public static void solidRhombus(int n) {
+        for (int i = 1; i <= n; i++) {
             //for spaces--->
-            for(int j=1;j<=n-i;j++){
+            for (int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
             }
             //for stars----->
-            for(int j=1;j<=n;j++){
+            for (int j = 1; j <= n; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-        }
+    }
 
     // Hollow Rhombus ------------>
     public static void hollowRhombus(int n) {
@@ -193,80 +197,85 @@ class Main {
             }
             //for stars----->
             for (int j = 1; j <= n; j++) {
-                if(i==1||i==n||j==1||j==n){
+                if (i == 1 || i == n || j == 1 || j == n) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
             }
             System.out.println();
         }
-         }
-         //Diamond pattern------------>
-        public static void diamond_pattern(int n){
-         for(int i=1;i<=n;i++){
-             for(int j=1;j<=n-i;j++){
-                 System.out.print(" ");
-             }
-             for(int j=1;j<=(2*i-1);j++){
-                 System.out.print("*");
-             }
-             System.out.println();
-         }
-            for(int i=n;i>=1;i--){
-                for(int j=1;j<=n-i;j++){
-                    System.out.print(" ");
-                }
-                for(int j=1;j<=(2*i-1);j++){
-                    System.out.print("*");
-                }
-                System.out.println();
+    }
+
+    //Diamond pattern------------>
+    public static void diamond_pattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
             }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        //Print the Reverse number ----------------->
-       public static void reverseNum(int num){
-        while(num>0){
+        for (int i = n; i >= 1; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    //Print the Reverse number ----------------->
+    public static void reverseNum(int num) {
+        while (num > 0) {
             int last_digit = num % 10;
             System.out.print(last_digit);
-            num =num / 10;
+            num = num / 10;
         }
 
-       }
-        //Reverse the original number-------------->
-    public static void reverseOgNum(int num){
-        int rev=0;
-        while(num>0){
+    }
+
+    //Reverse the original number-------------->
+    public static void reverseOgNum(int num) {
+        int rev = 0;
+        while (num > 0) {
             int last_digit = num % 10;
-            rev = (rev * 10)+ last_digit;
-            num =num / 10;
+            rev = (rev * 10) + last_digit;
+            num = num / 10;
         }
         System.out.print(rev);
     }
-        //Bigger in 3 numbers--------------------->
-       public static void bigNum(int a,int b, int c){
-        if(a>b && a>c){
+
+    //Bigger in 3 numbers--------------------->
+    public static void bigNum(int a, int b, int c) {
+        if (a > b && a > c) {
             System.out.print("A is bigger");
-        }else if(b>c){
+        } else if (b > c) {
             System.out.print("B is bigger");
-        }else{
+        } else {
             System.out.print("c is bigger");
         }
-       }
-       //Update array by argument ------------------->
-       public static void updateArr(int marks[]){
-         for(int i=0;i<marks.length;i++)
-             marks[i]=marks[i]+2;
-       }
+    }
 
-       //Linear search in array----------------> Complexity = O(n)
-      public static int linearSearch(int arr[],int target){
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==target){
+    //Update array by argument ------------------->
+    public static void updateArr(int marks[]) {
+        for (int i = 0; i < marks.length; i++)
+            marks[i] = marks[i] + 2;
+    }
+
+    //Linear search in array----------------> Complexity = O(n)
+    public static int linearSearch(int arr[], int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
                 return i;
             }
-          }
+        }
         return -1;
-      }
+    }
       /* Main fn -------->
        int arr[]={3,20,10,40,60};
          int target =10;
@@ -274,11 +283,11 @@ class Main {
          System.out.print("Target is at index : "+ result); */
 
     //Linear search in array more than 1 same target index---------------->
-    public static void linearSearch2(int arr[],int target){
-        List<Integer>Result =new ArrayList<>();
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==target){
-               Result.add(i) ;
+    public static void linearSearch2(int arr[], int target) {
+        List<Integer> Result = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                Result.add(i);
             }
         }
         System.out.print(Result);
@@ -288,39 +297,41 @@ class Main {
              linearSearch2(arr,target);  */
 
     //Largest Element in Array---------------->
-    public static int getLargest(int numbers[]){
+    public static int getLargest(int numbers[]) {
         int largest = Integer.MIN_VALUE; //----------For -infinity
-        for(int i=0;i<numbers.length;i++){
-            if(largest<numbers[i]){
-                largest=numbers[i];
+        for (int i = 0; i < numbers.length; i++) {
+            if (largest < numbers[i]) {
+                largest = numbers[i];
             }
         }
         return largest;
     }
 
     //Smallest Element in Array---------------->
-    public static int getSmallest(int numbers[]){
+    public static int getSmallest(int numbers[]) {
         int smallest = Integer.MAX_VALUE; //----------For +infinity
-        for(int i=0;i<numbers.length;i++){
-            if(smallest>numbers[i]){
-                smallest=numbers[i];
+        for (int i = 0; i < numbers.length; i++) {
+            if (smallest > numbers[i]) {
+                smallest = numbers[i];
             }
         }
         return smallest;
     }
+
     //Binary Search --------------------->
-    public static int binarySearch(int numbers[],int key){
-        int start =0; int end = numbers.length-1;
-        while(start<=end){
-           int mid = (start+end)/2;
-           if(numbers[mid]==key){
-               return mid;
-           }
-           if(numbers[mid]<key){
-               start = mid+1;
-           }else{
-               end = mid-1;
-           }
+    public static int binarySearch(int numbers[], int key) {
+        int start = 0;
+        int end = numbers.length - 1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (numbers[mid] == key) {
+                return mid;
+            }
+            if (numbers[mid] < key) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
         }
         return -1;
     }
@@ -330,144 +341,148 @@ class Main {
         System.out.print("Element present at index : "+result); */
 
     //Reverse an array ----------------->
-    public static void reverseArr(int numbers[]){
-       for(int i=0;i<numbers.length;i++){
-          int start =0;  int end = numbers.length - 1;
-          while(start < end) {
-              //swap ------>
-              int temp = numbers[end];
-              numbers[end] = numbers[start];
-              numbers[start] = temp;
-              start++;
-              end--;
-          }
-       }
+    public static void reverseArr(int numbers[]) {
+        for (int i = 0; i < numbers.length; i++) {
+            int start = 0;
+            int end = numbers.length - 1;
+            while (start < end) {
+                //swap ------>
+                int temp = numbers[end];
+                numbers[end] = numbers[start];
+                numbers[start] = temp;
+                start++;
+                end--;
+            }
+        }
     }
-       /*int numbers[] = {2,3,4,5,6,7,8};
-         reverseArr(numbers);
-         for(int i=0;i<numbers.length;i++){
-           System.out.print(numbers[i]+" ");
-        } */
+
+    /*int numbers[] = {2,3,4,5,6,7,8};
+      reverseArr(numbers);
+      for(int i=0;i<numbers.length;i++){
+        System.out.print(numbers[i]+" ");
+     } */
     //print the pairs of a number from array ----------->
-    public static void printPairs(int numbers[]){
+    public static void printPairs(int numbers[]) {
         int tp = 0;
-        for(int i=0;i<numbers.length;i++){
-            int curr =numbers[i];//2,4,6,8,10
-            for(int j=i+1;j<numbers.length;j++){
-                System.out.print("("+curr+","+numbers[j]+")");
+        for (int i = 0; i < numbers.length; i++) {
+            int curr = numbers[i];//2,4,6,8,10
+            for (int j = i + 1; j < numbers.length; j++) {
+                System.out.print("(" + curr + "," + numbers[j] + ")");
                 tp++;
             }
             System.out.println();
         }
-        System.out.print("Number of pairs = "+tp);
+        System.out.print("Number of pairs = " + tp);
     }
+
     // Print the number of possible subarrays from an array and their sum and min,max------------>
-     public static void printSubArr(int numbers[]){
-        int ts=0;
-        int sum=0;
-        int max=Integer.MIN_VALUE;
+    public static void printSubArr(int numbers[]) {
+        int ts = 0;
+        int sum = 0;
+        int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        for(int i=0;i<numbers.length;i++){
+        for (int i = 0; i < numbers.length; i++) {
             int start = i;
-            for(int j=i;j<numbers.length;j++){
-             int end = j;
-                 sum=0;
-             for(int k=start;k<=end;k++){
-                 System.out.print(numbers[k]+" ");
-                 sum+=numbers[k]; //Sum
-                 if(max<sum){   //max value
-                     max=sum;
-                 }
-                 if(min>sum){   //min value
-                     min=sum;
-                 }
-             }
+            for (int j = i; j < numbers.length; j++) {
+                int end = j;
+                sum = 0;
+                for (int k = start; k <= end; k++) {
+                    System.out.print(numbers[k] + " ");
+                    sum += numbers[k]; //Sum
+                    if (max < sum) {   //max value
+                        max = sum;
+                    }
+                    if (min > sum) {   //min value
+                        min = sum;
+                    }
+                }
 
-                System.out.println("------>Sum : "+sum);
+                System.out.println("------>Sum : " + sum);
 
-             ts++;
+                ts++;
                 System.out.println();
             }
             System.out.println();
         }
-         System.out.println("Minimum sum is  : "+min);
-         System.out.println("Maximum sum is  : "+max);
-         System.out.print("Total number of subarray : "+ts);
+        System.out.println("Minimum sum is  : " + min);
+        System.out.println("Maximum sum is  : " + max);
+        System.out.print("Total number of subarray : " + ts);
 
-     }
-      /*int numbers[] = {2,4,6,8,10};
-        printSubArr(numbers);*/
-     //Calculate the max sum of sub-array by Brute force method---->
-       public static void maxSum(int numbers[]){
-           int currSum=0;
-           int maxSum = Integer.MIN_VALUE;
-             for(int i=0;i<numbers.length;i++){
-               int start = i;
-               for(int j=i;j<numbers.length;j++){
-                   int end = j;
-                     currSum=0;
-                   for(int k=start;k<=end;k++){
-                       currSum+=numbers[k];
-                   }
-                   System.out.println("CurrSum : "+currSum);
-                   if(maxSum<currSum){
-                       maxSum=currSum;
-                   }
-               }
-           }
-           System.out.print("Max sum of sub-array : "+maxSum);
-       }
+    }
+
+    /*int numbers[] = {2,4,6,8,10};
+      printSubArr(numbers);*/
+    //Calculate the max sum of sub-array by Brute force method---->
+    public static void maxSum(int numbers[]) {
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            int start = i;
+            for (int j = i; j < numbers.length; j++) {
+                int end = j;
+                currSum = 0;
+                for (int k = start; k <= end; k++) {
+                    currSum += numbers[k];
+                }
+                System.out.println("CurrSum : " + currSum);
+                if (maxSum < currSum) {
+                    maxSum = currSum;
+                }
+            }
+        }
+        System.out.print("Max sum of sub-array : " + maxSum);
+    }
        /*int numbers[]={1,2,3,4,5,6};
         maxSum(numbers);*/
 
     // Odd and Even numbers present in array----------------->
-     public static void numberArr(int numbers[]){
-         int even=0;
-         int odd = 0;
-         int max = Integer.MIN_VALUE;
-         for(int i=0;i<numbers.length;i++){
-             if(numbers[i]%2==0){
-                 ++even;
-             }else{
-                 ++odd;
-             }
-             if(max<numbers[i]){
-                 max=numbers[i];
-             }
-         }
-         System.out.println("Even : "+even);
-         System.out.println("Odd : "+odd);
-         System.out.println("Max value : "+max);
-     }
+    public static void numberArr(int numbers[]) {
+        int even = 0;
+        int odd = 0;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                ++even;
+            } else {
+                ++odd;
+            }
+            if (max < numbers[i]) {
+                max = numbers[i];
+            }
+        }
+        System.out.println("Even : " + even);
+        System.out.println("Odd : " + odd);
+        System.out.println("Max value : " + max);
+    }
 
-     //Find missing number in array --------------->
-     public static int missNum(int numbers[],int n){
-         for(int i=0;i<numbers.length-1;i++){
-             if(numbers[i+1]-numbers[i]!=1){
-                 return numbers[i]+1;
-             }
-             if( numbers[numbers.length - 1]!=n){
-                 return n;
-             }
-         }
-         return -1;
-     }
+    //Find missing number in array --------------->
+    public static int missNum(int numbers[], int n) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i + 1] - numbers[i] != 1) {
+                return numbers[i] + 1;
+            }
+            if (numbers[numbers.length - 1] != n) {
+                return n;
+            }
+        }
+        return -1;
+    }
      /*int numbers[]={1,2,3,4,6,7,8,9,10};
         int n = 10;
         int result = missNum(numbers,n);
         System.out.println("Missing number is :"+result);*/
 
     //move all 0 in array at last index------------->
-    public static void zeroAtLast(int num[]){
-        int pos=0;
-        for(int i=0;i<num.length;i++){
-            if(num[i]!=0){
-                num[pos]=num[i];
+    public static void zeroAtLast(int num[]) {
+        int pos = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] != 0) {
+                num[pos] = num[i];
                 pos++;
             }
         }
-        while(pos<num.length){
-            num[pos]=0;
+        while (pos < num.length) {
+            num[pos] = 0;
             pos++;
         }
     }
@@ -477,57 +492,72 @@ class Main {
             System.out.print(num[i]);*/
 
     //Count of even & odd numbers in array---------------->
-    public static void evenOdd(int num[]){
-        int even=0;
-        int odd=0;
-        for(int i=0;i<num.length;i++){
-            if(num[i]%2==0){
+    public static void evenOdd(int num[]) {
+        int even = 0;
+        int odd = 0;
+        for (int i = 0; i < num.length; i++) {
+            if (num[i] % 2 == 0) {
                 even++;
-            }else{
+            } else {
                 odd++;
             }
         }
-        System.out.println("Count of even numbers :"+ even );
-        System.out.print("Count of odd numbers :"+ odd );
+        System.out.println("Count of even numbers :" + even);
+        System.out.print("Count of odd numbers :" + odd);
     }
+
     //Majority element in array (Brute force)------->
-    public static int majorityEl(int num[]){
-        int n=num.length;
-        for(int i=0;i<n;i++){
-            int count =0;
-            for(int j=0;j<n;j++){
-                if(num[i]==num[j]){
+    public static int majorityEl(int num[]) {
+        int n = num.length;
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (num[i] == num[j]) {
                     count++;
                 }
             }
-            if(count>n/2){
+            if (count > n / 2) {
                 return num[i];
             }
         }
         return -1;
     }
-         /*int num[]={1,2,2,3,2,4,2};
-         System.out.print(majorityEl(num));*/
+
+    /*int num[]={1,2,2,3,2,4,2};
+    System.out.print(majorityEl(num));*/
     //missing and repete number -------------->
-    public static void findNum(int myNum[]){
+    public static void findNum(int myNum[]) {
         Arrays.sort(myNum);
         int repeat = -1;
         int missing = -1;
-       for(int i=0;i<myNum.length-1;i++){
-               if(myNum[i+1]-myNum[i] > 1) {
-                    missing = myNum[i]+1;
-               }
-               if(myNum[i]==myNum[i+1]){
-                   repeat=myNum[i];
+        for (int i = 0; i < myNum.length - 1; i++) {
+            if (myNum[i + 1] - myNum[i] > 1) {
+                missing = myNum[i] + 1;
+            }
+            if (myNum[i] == myNum[i + 1]) {
+                repeat = myNum[i];
 
-           }
-       }
-        System.out.println("Missing number is - "+missing);
-        System.out.println("Repeat number - "+repeat);
+            }
+        }
+        System.out.println("Missing number is - " + missing);
+        System.out.println("Repeat number - " + repeat);
     }
     /*int myNum[]={1,2,4,4,2,3,5,2,1};
         findNum(myNum);
         }*/
+
+    //Average of elements present in array--------->
+    public static float avgOfEl(int num[]) {
+        int sum=0;
+        for(int i=0;i<num.length;i++){
+            sum+=num[i];
+        }
+        return (float)sum/num.length;
+    }
+}
+       /* int num[]={1,2,3,4};
+        float result = Main.avgOfEl(num);
+       System.out.print("avg : "+result);*/
     public static void main (String args[]){
 
     }
