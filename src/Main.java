@@ -558,6 +558,24 @@ class Main {
        /* int num[]={1,2,3,4};
         float result = Main.avgOfEl(num);
        System.out.print("avg : "+result);*/
+
+    //Two sum in array(brute force)------------>
+    public static int twoSum(int num[],int target){
+       for(int i=0;i<num.length;i++){
+            int start=i;
+           for(int j=i+1;j<num.length;j++){
+               int end=j;
+               if(num[start]+num[end]==target){
+                   System.out.print(start+","+end+" ");
+
+               }
+           }
+       }
+       return -1;
+    }
+    /*int num[]={11,32,13,24,76,14};
+        int target = 38;
+        twoSum(num,target);*/
     public static void main (String args[]){
 
     }
