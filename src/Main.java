@@ -576,6 +576,18 @@ class Main {
     /*int num[]={11,32,13,24,76,14};
         int target = 38;
         twoSum(num,target);*/
+    //Count the Odd numbers in given range ------->
+    public static int oddNum(int start,int end){
+       int count=0;
+       for(int i=start;i<=end;i++){
+           if(i % 2 != 0){
+               count++;
+           }
+       }
+       return count;
+    }
+    /*int result = oddNum(1,5);
+        System.out.println("Count : "+result);*/
     public static void main (String args[]){
 
     }
