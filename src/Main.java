@@ -586,8 +586,25 @@ class Main {
        }
        return count;
     }
+    //
     /*int result = oddNum(1,5);
         System.out.println("Count : "+result);*/
+    //Best Time to Buy and Sell Stock(Brute force)-------->
+     public static int buySell(int num[]){
+         int maxProfit=0;
+         for(int buy=0;buy<num.length-1;buy++){
+             for(int sell=buy+1;sell<num.length;sell++){
+                 int profit = num[sell]-num[buy];
+                 if(profit>maxProfit){
+                     maxProfit=profit;
+                 }
+             }
+         }
+         return maxProfit;
+     }
+     /*int num[]={7,5,5,3,6,4,10};
+        int result = buySell(num);
+        System.out.print(result);*/
     public static void main (String args[]){
 
     }
