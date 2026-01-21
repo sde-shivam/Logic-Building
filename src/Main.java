@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 class Main {
 
     //Bionomial Function------->
@@ -605,6 +606,23 @@ class Main {
      /*int num[]={7,5,5,3,6,4,10};
         int result = buySell(num);
         System.out.print(result);*/
+    //Second largest number in array----------->
+    public static int secLargest(int num[]){
+      int largest=Integer.MIN_VALUE;
+      int secLargest=Integer.MIN_VALUE;
+      for(int i=0;i<num.length;i++){
+          if(num[i]>largest){
+              secLargest=largest;
+              largest=num[i];
+          }else if(num[i]>secLargest && secLargest!=largest){
+                 secLargest=num[i];
+          }
+      }
+        return secLargest;
+    }
+    /*int num[]={1,2,3,4,5};
+        int r = secLargest(num);
+        System.out.print(r);*/
     public static void main (String args[]){
 
     }
