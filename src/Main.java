@@ -623,6 +623,18 @@ class Main {
     /*int num[]={1,2,3,4,5};
         int r = secLargest(num);
         System.out.print(r);*/
+    //Skip a number which is divisible ny 10 in array------>
+   public static void skipNum(int num[]){
+       for(int i=0;i<num.length;i++){
+           if(num[i]%10==0){
+               continue;
+           }else{
+           System.out.println(num[i]);
+       }
+       }
+   }
+    /* int num[]={13,22,30,41,50,11,43,12,90};
+        skipNum(num);*/
     public static void main (String args[]){
 
     }
