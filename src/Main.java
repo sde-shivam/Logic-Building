@@ -635,6 +635,31 @@ class Main {
    }
     /* int num[]={13,22,30,41,50,11,43,12,90};
         skipNum(num);*/
+   //Calculate sum of subarray (prefix sum)---------->
+    public static void sumSubArray(int num[]){
+        int currSum=0;
+        int max=Integer.MIN_VALUE;
+        int prefix[]= new int[num.length];
+        prefix[0]=num[0];
+        for(int i=1;i<prefix.length;i++){   // prefix array created...
+            prefix[i]=prefix[i-1]+num[i];
+        }
+         for(int i=0;i<num.length;i++){
+                int start=i;
+            for(int j=i;j<num.length;j++){
+                int end=j;
+
+             currSum = start==0 ? prefix[end]: prefix[end]-prefix[start-1];
+            if(max<currSum){
+                max=currSum;
+            }
+            }
+        }
+         System.out.print("Max sum : "+max);
+
+    }
+    /*int num[]={1,2,4};
+        sumSubArray(num);*/
     public static void main (String args[]){
 
     }
