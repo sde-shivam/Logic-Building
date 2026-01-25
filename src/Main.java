@@ -660,6 +660,21 @@ class Main {
     }
     /*int num[]={1,2,4};
         sumSubArray(num);*/
+    //Calculate max sum of subarray(kadanes Algoritham)------------>
+    public static void kadanes(int num[]){
+        int currSum=0;
+        int max=Integer.MIN_VALUE;
+        for(int i=0;i<num.length;i++){
+            currSum=currSum+num[i];
+          if(currSum<0){
+              currSum=0;
+          }
+           max=Math.max(currSum,max);
+        }
+        System.out.print("Max sum : "+max);
+    }
+    /*int num[]={-2,-3,4,-1,-2,1,5,-3};
+        kadanes(num);*/
     public static void main (String args[]){
 
     }
