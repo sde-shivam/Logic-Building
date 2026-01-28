@@ -675,7 +675,23 @@ class Main {
     }
     /*int num[]={-2,-3,4,-1,-2,1,5,-3};
         kadanes(num);*/
-    public static void main (String args[]){
+    //Calculate the frequency of a character
+    public static void freq(String str) {
+        int freq[] = new int[256];
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            freq[ch]++;
+        }
+
+        for (int i = 0; i < freq.length; i++) {
+            if (freq[i] > 0) {
+                System.out.println((char)i + " -> " + freq[i]);
+            }
+        }
+    }
+
+public static void main (String args[]){
 
     }
 
