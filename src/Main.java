@@ -681,18 +681,20 @@ class Main {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            freq[ch]++;
+            int AcsiiOfCh = ch;  //Can be - int AcsiiOfCh = (int)ch;
+            freq[AcsiiOfCh]++;  //Each charater is converted to ACSII value
         }
 
         for (int i = 0; i < freq.length; i++) {
             if (freq[i] > 0) {
-                System.out.println((char)i + " -> " + freq[i]);
+                System.out.println((char)i + " -> " + freq[i]); //Converting ACSII TO CHARACTER
             }
         }
     }
 
 public static void main (String args[]){
-
+    String str="shivamsingh";
+    freq(str);
     }
 
 
