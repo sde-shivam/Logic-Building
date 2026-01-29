@@ -691,10 +691,23 @@ class Main {
             }
         }
     }
-
+ //Find Duplicate in array (optimize soln by hashset)------>
+public static boolean findDuplicate(int num[]) {
+    Set<Integer> visited = new HashSet<>();
+    for (int i = 0; i < num.length; i++) {
+        if (visited.contains(num[i])) {
+            return true;
+        } else {
+            visited.add(num[i]);
+        }
+    }
+    return false;
+}
+/*int num[]={1,2,3,4,5};
+    boolean ans = findDuplicate(num);
+    System.out.print(ans);*/
 public static void main (String args[]){
-    String str="shivamsingh";
-    freq(str);
+
     }
 
 
