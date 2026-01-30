@@ -706,8 +706,26 @@ public static boolean findDuplicate(int num[]) {
 /*int num[]={1,2,3,4,5};
     boolean ans = findDuplicate(num);
     System.out.print(ans);*/
+//Product of array except self(brute Force)----------->
+ public static void productArr(int num[]){
+     int result[]=new int[num.length];
+     for(int i=0;i<num.length;i++){
+         int product=1;
+       for(int j=0;j<num.length;j++){
+         if(j!=i){
+             product*=num[j];
+         }
+       }
+       result[i]=product;
+     }
+     for(int i=0;i<result.length;i++){
+         System.out.print(result[i]+",");
+     }
+ } /*int num[]={1,2,3,4};
+     productArr(num);*/
 public static void main (String args[]){
-
+     int num[]={1,2,3,4};
+     productArr(num);
     }
 
 
