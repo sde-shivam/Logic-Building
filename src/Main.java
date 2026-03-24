@@ -723,9 +723,19 @@ public static boolean findDuplicate(int num[]) {
      }
  } /*int num[]={1,2,3,4};
      productArr(num);*/
+// Find the missing number--------------------->
+public static int missingNumber(int[] nums) {
+    int n = nums.length + 1;
+    int expected = n * (n + 1) / 2;
+    int actual = 0;
+    for (int num : nums) {
+        actual += num;
+    }
+    return expected - actual;
+}
 public static void main (String args[]){
-     int num[]={1,2,3,4};
-     productArr(num);
+     int num[]={1,2,4,5};
+    System.out.print(missingNumber(num));
     }
 
 
