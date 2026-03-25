@@ -733,6 +733,18 @@ public static int missingNumber(int[] nums) {
     }
     return expected - actual;
 }
+//Move all zeroes to End------------------------->
+public static void moveZeroes(int[] nums) {
+    int j = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] != 0) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            j++;
+        }
+    }
+}
 public static void main (String args[]){
      int num[]={1,2,4,5};
     System.out.print(missingNumber(num));
