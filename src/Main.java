@@ -745,6 +745,23 @@ public static void moveZeroes(int[] nums) {
         }
     }
 }
+//Move All Negative Numbers to One Side---------------->
+   public static void moveNegative(int[] arr) {
+      int left = 0, right = arr.length - 1;
+      while (left <= right) {
+        if (arr[left] < 0) {
+            left++;
+        } else if (arr[right] >= 0) {
+            right--;
+        } else {
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+          }
+        }
+      }
 public static void main (String args[]){
      int num[]={1,2,4,5};
     System.out.print(missingNumber(num));
