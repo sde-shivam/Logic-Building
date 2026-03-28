@@ -765,7 +765,6 @@ public static void moveZeroes(int[] nums) {
   // Sort an Array of 0s, 1s and 2s----------------------->
   public static void sort012(int[] arr) {
       int low = 0, mid = 0, high = arr.length - 1;
-
       while (mid <= high) {
           if (arr[mid] == 0) {
               int temp = arr[low];
@@ -777,7 +776,7 @@ public static void moveZeroes(int[] nums) {
           else if (arr[mid] == 1) {
               mid++;
           }
-          else { // arr[mid] == 2
+          else {
               int temp = arr[mid];
               arr[mid] = arr[high];
               arr[high] = temp;
@@ -785,6 +784,18 @@ public static void moveZeroes(int[] nums) {
           }
       }
   }
+//Remove Duplicates from Sorted Array-------------------->
+public static int removeDuplicates(int[] nums) {
+    if (nums.length == 0) return 0;
+    int i = 0;
+    for (int j = 1; j < nums.length; j++) {
+        if (nums[j] != nums[i]) {
+            i++;
+            nums[i] = nums[j];
+        }
+    }
+    return i + 1;
+}
 public static void main (String args[]){
      int num[]={1,2,4,5};
     sort012((num));
