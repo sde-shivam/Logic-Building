@@ -838,6 +838,17 @@ String getSmallAndLarge(String s, int k) {
     }
     return smallest + "\n" + largest;
 }
+//Check anagrams (two strings have the exact same characters with the same frequency)->
+// By inbuilt methods
+public static boolean anagram(String s1,String s2) {
+    if (s1.length() != s2.length()) return false;
+    char[] a = s1.toCharArray();
+    char[] b = s2.toCharArray();
+    Arrays.sort(a);
+    Arrays.sort(b);
+    return Arrays.equals(a, b);
+}
+
 public static void main (String args[]){
      int num[]={1,2,4,5};
     sort012((num));
