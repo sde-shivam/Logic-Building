@@ -848,7 +848,23 @@ public static boolean anagram(String s1,String s2) {
     Arrays.sort(b);
     return Arrays.equals(a, b);
 }
-
+//Check anagrams(By ASCII value)-------------------->
+static boolean isAnagram(String a, String b) {
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+    boolean isAnagram = true;
+    int[] freq = new int[128];  // 128 includes a-z & A-Z
+    for (char c : a.toCharArray())
+        freq[c]++;
+    for (char c : b.toCharArray())
+        freq[c]--;
+    for (int f : freq) {
+        if (f != 0) {
+            isAnagram = false;
+        }
+    }
+    return isAnagram;
+}
 public static void main (String args[]){
      int num[]={1,2,4,5};
     sort012((num));
