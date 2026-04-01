@@ -865,9 +865,18 @@ static boolean isAnagram(String a, String b) {
     }
     return isAnagram;
 }
+// Find unique element in array(XOR METHOD (A^A=0 & A^0=A) Basically it eleminate the pair )---------------->
+public static int uniqueEl(int num[]){
+    int unique = 0;
+    for(int i=0;i<num.length;i++){
+        unique=unique^num[i];
+    }
+    return unique;
+}
 public static void main (String args[]){
-     int num[]={1,2,4,5};
-    sort012((num));
+     int num[]={1,1,4,5,5};
+    int result = uniqueEl((num));
+    System.out.print(result);
     }
 
 
