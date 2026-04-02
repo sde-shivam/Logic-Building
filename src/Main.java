@@ -873,10 +873,17 @@ public static int uniqueEl(int num[]){
     }
     return unique;
 }
+//Find a factorial of a number (Recursion method)---------------->
+public static int factorialOfNum(int num){
+   if (num==0){
+       return 1;
+   }else{
+       return num * factorialOfNum(num-1);
+   }
+}
 public static void main (String args[]){
-     int num[]={1,1,4,5,5};
-    int result = uniqueEl((num));
-    System.out.print(result);
+    int result = factorialOfNum(5);
+    System.out.print("factorial of a number is : "+result);
     }
 
 
