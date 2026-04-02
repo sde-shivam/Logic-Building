@@ -881,9 +881,17 @@ public static int factorialOfNum(int num){
        return num * factorialOfNum(num-1);
    }
 }
+// Sum of N natural number using Recursion method -------------------->
+public static int sumOfNum(int num){
+    if (num==0){
+        return 0;
+    }else{
+        return num + sumOfNum(num-1);
+    }
+}
 public static void main (String args[]){
-    int result = factorialOfNum(5);
-    System.out.print("factorial of a number is : "+result);
+    int result = sumOfNum(5);
+    System.out.print("Sum of a number is : "+result);
     }
 
 
