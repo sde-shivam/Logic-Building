@@ -900,9 +900,14 @@ public static void sumOf(int num[]){
          System.out.println(sum-num[i]+" + "+num[i]+" = "+sum);
     }
 }
+// Median of 3 value------------->
+public static int medianNum(int a,int b,int c){
+    int median = a+b+c - Math.min(a,Math.min(b,c))-Math.max(a,Math.max(b,c));
+    return median;
+}
 public static void main (String args[]){
-    int[] num = {1,2,3,4,5,6};
-       sumOf(num);
+    int res = medianNum(4,10,9);
+    System.out.println("Median : "+res);
     }
 
 
