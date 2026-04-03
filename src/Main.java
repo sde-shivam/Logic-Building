@@ -905,9 +905,16 @@ public static int medianNum(int a,int b,int c){
     int median = a+b+c - Math.min(a,Math.min(b,c))-Math.max(a,Math.max(b,c));
     return median;
 }
+//s2 is substring of s1----------------->
+public static void isSubstring(String s1, String s2){
+    if(s1.contains(s2)){
+        System.out.println("s2 is substring of s1");
+    }else{
+        System.out.println("s2 is not substring of s1");
+    }
+}
 public static void main (String args[]){
-    int res = medianNum(4,10,9);
-    System.out.println("Median : "+res);
+    isSubstring();
     }
 
 
