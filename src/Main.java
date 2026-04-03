@@ -913,8 +913,20 @@ public static void isSubstring(String s1, String s2){
         System.out.println("s2 is not substring of s1");
     }
 }
+//Find the "AM" "PM" using time Hr and minutes -------------->
+public static void timeCal(int hr,int min){
+    if((hr>=0 && hr<=23) && (min>=0 && min<=59)){
+        if(hr<12){
+            System.out.println("AM");
+        }else{
+            System.out.println("PM");
+        }
+    }else{
+        System.out.println("Invalid time selected");
+    }
+}
 public static void main (String args[]){
-    isSubstring();
+    timeCal(24,59);
     }
 
 
