@@ -889,9 +889,20 @@ public static int sumOfNum(int num){
         return num + sumOfNum(num-1);
     }
 }
+// sum of incremental numbers------------->
+public static void sumOf(int num[]){
+    int sum=1;
+    for(int i=1;i<num.length;i++){
+        sum += num[i];
+        if(sum==10){
+            continue;
+        }
+         System.out.println(sum-num[i]+" + "+num[i]+" = "+sum);
+    }
+}
 public static void main (String args[]){
-    int result = sumOfNum(5);
-    System.out.print("Sum of a number is : "+result);
+    int[] num = {1,2,3,4,5,6};
+       sumOf(num);
     }
 
 
