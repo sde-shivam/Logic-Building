@@ -925,8 +925,19 @@ public static void timeCal(int hr,int min){
         System.out.println("Invalid time selected");
     }
 }
+//determine days (1-7) weekday or weekend------------------------>
+public static void weekdayOrWeekend(int day){
+    String[] arr = {"mon","Tue","Wed","Thur","Fri","Sat","Sun"};
+    if(day >0 && day<=5){
+        System.out.println(arr[day-1]+" is "+"Weekday");
+    }else if(day>5 && day<=7){
+        System.out.println(arr[day-1]+" is "+"Weekend");
+    }else{
+        System.out.println("Invalid number");
+    }
+}
 public static void main (String args[]){
-    timeCal(24,59);
+    weekdayOrWeekend(8);
     }
 
 
