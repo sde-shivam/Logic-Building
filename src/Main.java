@@ -944,8 +944,26 @@ public static void passwordCheck(String s){
         System.out.println("Incorrect password");
     }
 }
+// calculate the electricity units consumed and calculate the bill as per slab ------->
+public static void electricityBill(int unit){
+    double bill =0;
+    if(unit <=0){
+        System.out.println("Incorrect reading");
+    }
+    else if(unit<=100){
+        System.out.println("First slab");
+        bill += 100*1.5;
+    }else if(unit<=200){
+        System.out.println("Second slab");
+        bill +=100*1.5+(unit-100)*2.5;
+    }else if(unit<=300){
+        System.out.println("Third slab");
+        bill +=100*1.5+100*2.5+(unit-200)*0.5;
+    }
+    System.out.println("Electricity bill : "+bill);
+}
 public static void main (String args[]){
-    passwordCheck("shivamsingh23");
+    electricityBill(-155);
     }
 
 
