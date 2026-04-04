@@ -936,8 +936,16 @@ public static void weekdayOrWeekend(int day){
         System.out.println("Invalid number");
     }
 }
+//Check a password (length>=8 and contains at least one digit)------------->
+public static void passwordCheck(String s){
+    if(s.length()>=8 && s.matches(".*[0-9].*")){     // Regex
+        System.out.println("Correct password");
+    }else{
+        System.out.println("Incorrect password");
+    }
+}
 public static void main (String args[]){
-    weekdayOrWeekend(8);
+    passwordCheck("shivamsingh23");
     }
 
 
