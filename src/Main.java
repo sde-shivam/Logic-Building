@@ -982,8 +982,28 @@ public static void pythagoreanTriplet(int a,int b,int c){
         System.out.println("Not a Pythagorean Triplet");
     }
 }
+//check month and day is valid or not--------------------->
+public static void  checkDate(int month,int day){
+    int maxDay=0;
+    if(month<1 || month>12){
+        System.out.println("Invalid month");
+        return;
+    }
+    if(month==2){
+        maxDay=28;
+    }else if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
+        maxDay=31;
+    }else{
+        maxDay=30;
+    }
+    if(day>=1 && day<=maxDay){
+        System.out.println("Valid Day");
+    }else{
+        System.out.println("Invalid Day");
+    }
+}
 public static void main (String args[]){
-    pythagoreanTriplet(5,12,13);
+    checkDate(13,0);
     }
 
 
