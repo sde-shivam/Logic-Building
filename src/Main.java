@@ -962,8 +962,28 @@ public static void electricityBill(int unit){
     }
     System.out.println("Electricity bill : "+bill);
 }
+// pythagorean Triplet----------------->
+public static void pythagoreanTriplet(int a,int b,int c){
+    int x = Math.max(a,Math.max(b,c));
+    int y,z;
+    if(x==a){
+        y=b;
+        z=c;
+    }else if(x==b){
+        y=a;
+        z=c;
+    }else{
+        y=a;
+        z=b;
+    }
+    if(x*x == (y*y + z*z)){
+        System.out.println("Pythagorean Triplet");
+    }else{
+        System.out.println("Not a Pythagorean Triplet");
+    }
+}
 public static void main (String args[]){
-    electricityBill(-155);
+    pythagoreanTriplet(5,12,13);
     }
 
 
