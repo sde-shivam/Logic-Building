@@ -1002,8 +1002,24 @@ public static void  checkDate(int month,int day){
         System.out.println("Invalid Day");
     }
 }
+//check the sum of its digit is greater than the product of its digit------------------------->
+public static void checkNumber(int num){
+    int sum=0;
+    int product=1;
+    while(num>0){
+       int lastDigit = num % 10;
+       sum+=lastDigit;
+       product*=lastDigit;
+       num=num/10;
+    }
+    if(sum>product){
+        System.out.println("Sum is greater");
+    }else{
+        System.out.println("Product is greater");
+    }
+}
 public static void main (String args[]){
-    checkDate(13,0);
+    checkNumber(5678);
     }
 
 
