@@ -1018,8 +1018,18 @@ public static void checkNumber(int num){
         System.out.println("Product is greater");
     }
 }
+//Count the digits------------------->
+public static void countNum(){
+    int num = 52356378;
+    int count = 0;
+    while(num>0){
+        count++;
+        num = num/10;
+    }
+    System.out.println(count);
+}
 public static void main (String args[]){
-    checkNumber(5678);
+    countNum();
     }
 
 
