@@ -1039,8 +1039,23 @@ public static void revNum(){
      }
      System.out.println(rev);
 }
+// Check Armstrong number----------------->
+public static void armNum(int num){
+    int original = num;
+    int cubeSum = 0;
+    while(num>0){
+        int lastDigit = num % 10;
+        cubeSum += Math.pow(lastDigit,3);
+        num = num/10;
+    }
+    if(original == cubeSum){
+        System.out.println("Armstrong Number");
+    }else{
+        System.out.println("Not a Armstrong Number");
+    }
+}
 public static void main (String args[]){
-    revNum();
+    armNum(57);
     }
 
 
