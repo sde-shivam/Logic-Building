@@ -1054,8 +1054,23 @@ public static void armNum(int num){
         System.out.println("Not a Armstrong Number");
     }
 }
+//check perfect number ------------------>
+public static void  perfectNum(int num){
+    int original = num;
+    int numSum = 1;
+    for(int i=2;i<=num/2;i++){
+        if(num % i == 0){
+            numSum += i;
+        }
+    }
+    if(original == numSum){
+        System.out.println("Perfect number");
+    }else{
+        System.out.println("Not a Perfect number");
+    }
+}
 public static void main (String args[]){
-    armNum(57);
+    perfectNum(8);
     }
 
 
