@@ -1069,9 +1069,23 @@ public static void  perfectNum(int num){
         System.out.println("Not a Perfect number");
     }
 }
-public static void main (String args[]){
-    perfectNum(8);
+// prime number from 1 - 100 ---------------->
+public static boolean primeNumber(int num) {
+    if (num <= 1) {
+        System.out.println("Invalid number");
+        return false;
     }
+    for (int i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+public static void main (String args[]) {
+    boolean res = primeNumber(5);
+    System.out.println(res);
+}
 
 
 
