@@ -1071,20 +1071,39 @@ public static void  perfectNum(int num){
 }
 // prime number from 1 - 100 ---------------->
 public static boolean primeNumber(int num) {
-    if (num <= 1) {
-        System.out.println("Invalid number");
-        return false;
+        boolean isPrime = true;
+        if (num <= 1) {
+            System.out.println("Invalid number");
+            isPrime = false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = false;
+            }
+        }
+        return isPrime;
     }
-    for (int i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i == 0) {
-            return false;
+    //prime num till 100------------->
+public static void primeNumTill100(){
+   for(int num = 2;num<=100;num++){
+    boolean isPrime = true;
+    if(num<=1){
+        System.out.println("Invalid number");
+        isPrime = false;
+        return;
+    }
+    for(int i=2;i<=Math.sqrt(num);i++){
+        if(num%i==0){
+            isPrime = false;
         }
     }
-    return true;
+    if(isPrime){
+        System.out.print(num+" , ");
+    }
+}
 }
 public static void main (String args[]) {
-    boolean res = primeNumber(5);
-    System.out.println(res);
+    primeNumTill100();
 }
 
 
