@@ -1102,8 +1102,27 @@ public static void primeNumTill100(){
     }
 }
 }
+//Fibonaci series------------------>
+public static void fiboSeries(){
+    int sum=0;
+    for(int i=0;i<=100;i++){
+      for(int j=1;j<=100;j++){
+        sum += i+j;
+          System.out.print(sum+" , ");
+          sum=0;
+      }
+  }
+}
+//swap two numbers----------------->
+public static void swapNum(){
+    int a=23,b=98;
+    int temp = a;
+    a=b;
+    b=temp;
+    System.out.print("a :"+a+", b :"+b);
+}
 public static void main (String args[]) {
-    primeNumTill100();
+    swapNum();
 }
 
 
