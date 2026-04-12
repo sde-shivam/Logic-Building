@@ -1114,15 +1114,21 @@ public static void fiboSeries(){
   }
 }
 //swap two numbers----------------->
-public static void swapNum(){
-    int a=23,b=98;
+public static void swapNum(int a,int b){
     int temp = a;
     a=b;
     b=temp;
     System.out.print("a :"+a+", b :"+b);
 }
+//swap two numbers (Optimize way XOR)------------->
+public static void swapNumbers(int a,int b){
+    a = a ^ b;            //a = a + b
+    b = a ^ b;            //b = a - b
+    a = a ^ b;            //a = a - b
+    System.out.print("a :"+a+", b :"+b);
+}
 public static void main (String args[]) {
-    swapNum();
+    swapNumbers(8,6);
 }
 
 
