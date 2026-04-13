@@ -1084,34 +1084,23 @@ public static boolean primeNumber(int num) {
         return isPrime;
     }
     //prime num till 100------------->
-public static void primeNumTill100(){
-   for(int num = 2;num<=100;num++){
-    boolean isPrime = true;
-    if(num<=1){
-        System.out.println("Invalid number");
-        isPrime = false;
-        return;
-    }
-    for(int i=2;i<=Math.sqrt(num);i++){
-        if(num%i==0){
+public static void primeNumTill100() {
+    for (int num = 2; num <= 100; num++) {
+        boolean isPrime = true;
+        if (num <= 1) {
+            System.out.println("Invalid number");
             isPrime = false;
+            return;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = false;
+            }
+        }
+        if (isPrime) {
+            System.out.print(num + " , ");
         }
     }
-    if(isPrime){
-        System.out.print(num+" , ");
-    }
-}
-}
-//Fibonaci series------------------>
-public static void fiboSeries(){
-    int sum=0;
-    for(int i=0;i<=100;i++){
-      for(int j=1;j<=100;j++){
-        sum += i+j;
-          System.out.print(sum+" , ");
-          sum=0;
-      }
-  }
 }
 //swap two numbers----------------->
 public static void swapNum(int a,int b){
@@ -1127,8 +1116,18 @@ public static void swapNumbers(int a,int b){
     a = a ^ b;            //a = a - b
     System.out.print("a :"+a+", b :"+b);
 }
+// Fibonacii series---------------->
+public static void fiboSeries(int num){
+    int a=0,b=1;
+    for(int i=0;i<=num;i++){
+        System.out.print(a+" , ");
+        int next = a+b;
+        a=b;
+        b = next;
+    }
+}
 public static void main (String args[]) {
-    swapNumbers(8,6);
+    fiboSeries(10);
 }
 
 
