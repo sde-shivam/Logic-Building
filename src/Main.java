@@ -1126,8 +1126,21 @@ public static void fiboSeries(int num){
         b = next;
     }
 }
+//Sum of n Fibonacii series--------------------->
+public static void sumFibo(int n){
+    int a = 0,b=1,sum=0;
+    for(int i=0;i<=n;i++){
+        System.out.print(a+" , ");
+        sum+=a;
+        int next = a+b;
+        a=b;
+        b = next;
+    }
+    System.out.println();
+    System.out.println("sum : "+sum);
+}
 public static void main (String args[]) {
-    fiboSeries(10);
+    sumFibo(6);
 }
 
 
