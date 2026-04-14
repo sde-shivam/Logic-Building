@@ -1139,8 +1139,17 @@ public static void sumFibo(int n){
     System.out.println();
     System.out.println("sum : "+sum);
 }
+//Reverse a String ------------------->
+public static void revString(String s){
+    String rev = "";
+    for(int i=s.length()-1;i>=0;i--){
+        char ch = s.charAt(i);
+        rev+=ch;
+    }
+    System.out.println("Reverse : "+rev);
+}
 public static void main (String args[]) {
-    sumFibo(6);
+    revString("dfghjk");
 }
 
 
