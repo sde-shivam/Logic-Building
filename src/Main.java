@@ -1148,8 +1148,15 @@ public static void revString(String s){
     }
     System.out.println("Reverse : "+rev);
 }
+//Squre of a number----------------->
+public static void sqrNum(int num){
+    for(int i=0;i<=num;i++){
+        int squre =(int)Math.pow(i,2);
+        System.out.print(squre+" , ");
+    }
+}
 public static void main (String args[]) {
-    revString("dfghjk");
+    sqrNum(10);
 }
 
 
