@@ -1165,14 +1165,27 @@ public static void divBy7(int a,int b){
 }
 // Find factors ---------------->
 public static void factors(int num){
+
     for(int i=2;i<=num/2;i++){
         if(num%i==0){
             System.out.print(i+" , ");
         }
     }
 }
+// Find sum of factors ---------------->
+public static void factorSum(int num){
+    int sum=0;
+    for(int i=2;i<=num/2;i++){
+        if(num%i==0){
+            System.out.print(i+" , ");
+            sum += i;
+        }
+    }
+    System.out.println();
+    System.out.print("Sum : "+sum);
+}
 public static void main (String args[]) {
-    factors(40);
+    factorSum(40);
 }
 
 
