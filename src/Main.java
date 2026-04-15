@@ -1155,8 +1155,16 @@ public static void sqrNum(int num){
         System.out.print(squre+" , ");
     }
 }
+// numbers divisible by 7 (a to b)--------------->
+public static void divBy7(int a,int b){
+    for(int i=a;i<=b;i++){
+       if(i%7==0){
+           System.out.print(i+" , ");
+       }
+    }
+}
 public static void main (String args[]) {
-    sqrNum(10);
+    divBy7(12,40);
 }
 
 
