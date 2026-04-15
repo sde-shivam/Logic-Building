@@ -1163,8 +1163,16 @@ public static void divBy7(int a,int b){
        }
     }
 }
+// Find factors ---------------->
+public static void factors(int num){
+    for(int i=2;i<=num/2;i++){
+        if(num%i==0){
+            System.out.print(i+" , ");
+        }
+    }
+}
 public static void main (String args[]) {
-    divBy7(12,40);
+    factors(40);
 }
 
 
