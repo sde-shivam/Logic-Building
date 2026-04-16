@@ -1184,8 +1184,18 @@ public static void factorSum(int num){
     System.out.println();
     System.out.print("Sum : "+sum);
 }
+// Find HCF ------------------->
+public static int hcf(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
 public static void main (String args[]) {
-    factorSum(40);
+   int res = hcf(40,60);
+    System.out.println(res);
 }
 
 
