@@ -1193,9 +1193,21 @@ public static int hcf(int a, int b) {
     }
     return a;
 }
+// Find LCM ------------------------->
+public static void lcm(int a, int b) {
+    int max = Math.max(a, b);
+    while (true) {
+        if (max % a == 0 && max % b == 0) {
+            System.out.println("LCM = " + max);
+            break;
+        }
+        max++;
+    }
+}
+
 public static void main (String args[]) {
-   int res = hcf(40,60);
-    System.out.println(res);
+   lcm(20,30);
+
 }
 
 
