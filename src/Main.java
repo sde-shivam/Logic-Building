@@ -1212,8 +1212,16 @@ public static void arithSeries(int a,int d,int n){
         term += d;
     }
 }
+//GP till n term---------------------->
+public static void geomeSeries(int a,int r,int n){
+    int term = a;
+    for(int i=1;i<=n;i++){
+        System.out.print(term+" , ");
+        term *=r;
+    }
+}
 public static void main (String args[]) {
-    arithSeries(2,3,10);
+    geomeSeries(2,2,5);
 
 }
 
