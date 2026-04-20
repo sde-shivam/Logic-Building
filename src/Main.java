@@ -1204,9 +1204,16 @@ public static void lcm(int a, int b) {
         max++;
     }
 }
-
+// AP till n term------------------->
+public static void arithSeries(int a,int d,int n){
+    int term = a;
+    for(int i=1;i<=n;i++){
+        System.out.print(term+" , ");
+        term += d;
+    }
+}
 public static void main (String args[]) {
-   lcm(20,30);
+    arithSeries(2,3,10);
 
 }
 
