@@ -1220,9 +1220,34 @@ public static void geomeSeries(int a,int r,int n){
         term *=r;
     }
 }
-public static void main (String args[]) {
-    geomeSeries(2,2,5);
+//Anagram of big string ---------------->
+public static int[] anagramString(String big, String small) {
+    big = big.toLowerCase();
+    small = small.toLowerCase();
 
+    char[] smallSorted = small.toCharArray();
+    Arrays.sort(smallSorted);
+
+    ArrayList<Integer> matches = new ArrayList<>();
+    for (int i = 0; i <= big.length() - small.length(); i++) {
+        char[] window = big.substring(i, i + small.length()).toCharArray();
+        Arrays.sort(window);
+
+        if (Arrays.equals(window, smallSorted)) {
+            matches.add(i);
+        }
+    }
+    int[] result = new int[matches.size()];
+    for (int i = 0; i < matches.size(); i++) {
+        result[i] = matches.get(i);
+    }
+    return result;
+}
+public static void main (String args[]) {
+    int[] ans = anagramString("ABCABCABC", "BCA");
+    for (int each : ans) {
+        System.out.print(each + " ");
+    }
 }
 
 
