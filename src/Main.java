@@ -1243,11 +1243,23 @@ public static int[] anagramString(String big, String small) {
     }
     return result;
 }
-public static void main (String args[]) {
-    int[] ans = anagramString("ABCABCABC", "BCA");
-    for (int each : ans) {
-        System.out.print(each + " ");
+//Palindrome number from 1 - 500----------------->
+public static boolean palindromNum(int num){
+    int original = num;
+    int rev = 0;
+    while(num>0){
+        int lastDigit = num % 10;
+        rev = rev * 10 + lastDigit;
+        num = num/10;
     }
+    return original == rev;
+}
+public static void main (String args[]) {
+    for (int i=0;i<=500;i++) {
+        boolean ans = palindromNum(i);
+        if(ans){
+        System.out.println(i);
+    }}
 }
 
 
