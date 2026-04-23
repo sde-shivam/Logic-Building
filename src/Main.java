@@ -1254,12 +1254,24 @@ public static boolean palindromNum(int num){
     }
     return original == rev;
 }
+//for (int i=0;i<=500;i++) {
+//        boolean ans = palindromNum(i);
+//        if(ans){
+//        System.out.println(i);
+//    }}
+
+//number 1-100 whose sum of digits is divisible by 3--------------------->
+public static void sumOfDigitMulOf3(){
+    for(int i=3;i<=100;i+=3){
+      int x = i % 10;
+      int y = i / 10;
+      if((x+y)%3==0){
+          System.out.println(i);
+      }
+    }
+}
 public static void main (String args[]) {
-    for (int i=0;i<=500;i++) {
-        boolean ans = palindromNum(i);
-        if(ans){
-        System.out.println(i);
-    }}
+    sumOfDigitMulOf3();
 }
 
 
