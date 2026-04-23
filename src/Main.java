@@ -1270,8 +1270,24 @@ public static void sumOfDigitMulOf3(){
       }
     }
 }
+//Largest and smallest digit in a number -------------->
+public static void smallestAndLargest(int num){
+    int largest = 0;
+    int smallest = 9;
+    while(num>0){
+        int lastDigit = num % 10;
+        if(lastDigit>largest){
+            largest = lastDigit;
+        }else if(lastDigit < smallest){
+            smallest = lastDigit;
+        }
+        num = num/10;
+    }
+    System.out.println("Largest digit : "+largest);
+    System.out.println("Smallest digit : "+smallest);
+}
 public static void main (String args[]) {
-    sumOfDigitMulOf3();
+    smallestAndLargest(98999);
 }
 
 
