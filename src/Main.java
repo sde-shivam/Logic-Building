@@ -1286,8 +1286,20 @@ public static void smallestAndLargest(int num){
     System.out.println("Largest digit : "+largest);
     System.out.println("Smallest digit : "+smallest);
 }
+// Factorial from 1 - n ----------------------->
+public static void factToN(int n){
+    long fact =1;
+    for(int i=1;i<=n;i++){
+      fact *= i;
+    }
+    System.out.println("Factorial of "+n+" : "+fact);
+}
+//for(int i=1;i<=50;i++) {
+//        factToN(i);
+//    }
+
 public static void main (String args[]) {
-    smallestAndLargest(98999);
+
 }
 
 
