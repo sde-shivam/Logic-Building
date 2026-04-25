@@ -1298,8 +1298,23 @@ public static void factToN(int n){
 //        factToN(i);
 //    }
 
+// Take input of 5 number and print the sum (Continue for 0)------------------------>
+public static void printSum(){
+    Scanner scn =new Scanner(System.in);
+    int sum=0;
+    for (int i=1;i<=5;i++){
+        System.out.print("Enter the number : ");
+       int num = scn.nextInt();
+       if(num==0){
+           continue;
+       }else{
+           sum+=num;
+       }
+    }
+    System.out.println("Sum of numbers : "+sum);
+}
 public static void main (String args[]) {
-
+    printSum();
 }
 
 
