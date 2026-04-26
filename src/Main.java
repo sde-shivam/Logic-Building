@@ -1313,8 +1313,23 @@ public static void printSum(){
     }
     System.out.println("Sum of numbers : "+sum);
 }
+//odd digit and even digit sum in a number------------------>
+public static void oddEvenDigitSum(int num){
+    int oddSum = 0,evenSum = 0;
+    while(num>0){
+        int digit = num%10;
+        if(digit % 2==0){
+            evenSum+=digit;
+        }else{
+            oddSum+= digit;
+        }
+        num = num/10;
+    }
+    System.out.println("Even Digit Sum : "+evenSum);
+    System.out.println("Odd Digit Sum : "+oddSum);
+}
 public static void main (String args[]) {
-    printSum();
+    oddEvenDigitSum(567889);
 }
 
 
