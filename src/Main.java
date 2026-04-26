@@ -1334,8 +1334,20 @@ public static void printi2(int row){
         System.out.println(i*i);
     }
 }
+// Print 1 - n using recursion------------------>
+public static void printNumber(int n){
+    if(n==0) return;
+    printNumber(n-1);
+    System.out.println(n);
+}
+// Print n - 1 using recursion--------------------->
+public static void printNumberDown(int n){
+    if(n==0) return;
+    System.out.println(n);
+    printNumberDown(n-1);
+}
 public static void main (String args[]) {
-    printi2(50);
+    printNumberDown(50);
 }
 
 
