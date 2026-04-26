@@ -1346,8 +1346,17 @@ public static void printNumberDown(int n){
     System.out.println(n);
     printNumberDown(n-1);
 }
-public static void main (String args[]) {
-    printNumberDown(50);
+//
+public static void printEvenNumber(int num){
+    if(num==0)return;
+    printEvenNumber(num-1);
+   if(num % 2==0){
+       System.out.println(num);
+   }
+
+}
+public static void main (String args[]){
+    printEvenNumber(50);
 }
 
 
