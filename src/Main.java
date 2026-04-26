@@ -1346,17 +1346,30 @@ public static void printNumberDown(int n){
     System.out.println(n);
     printNumberDown(n-1);
 }
-//
+//print Even Number using recursion------------------>
 public static void printEvenNumber(int num){
     if(num==0)return;
     printEvenNumber(num-1);
    if(num % 2==0){
        System.out.println(num);
    }
-
+}
+//sum of numbers 1 - n using recursion------------------->
+public static int printSum(int num){
+    if (num==0) return 0;
+    else return num +printSum(num-1);
+}
+// Print Even sum from 1-n using recursion----------------->
+public static int printEvenSum(int num){
+    if (num<=0) return 0;
+    if(num % 2==0){
+       return num +printEvenSum(num-2);
+    }
+    return printEvenSum(num-1);
 }
 public static void main (String args[]){
-    printEvenNumber(50);
+    int res = printEvenSum(8);
+    System.out.println(res);
 }
 
 
