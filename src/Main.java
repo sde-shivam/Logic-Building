@@ -1328,8 +1328,14 @@ public static void oddEvenDigitSum(int num){
     System.out.println("Even Digit Sum : "+evenSum);
     System.out.println("Odd Digit Sum : "+oddSum);
 }
+// Each row i print i*i---------------------------->
+public static void printi2(int row){
+    for(int i=1;i<=row;i++){
+        System.out.println(i*i);
+    }
+}
 public static void main (String args[]) {
-    oddEvenDigitSum(567889);
+    printi2(50);
 }
 
 
