@@ -1367,9 +1367,20 @@ public static int printEvenSum(int num){
     }
     return printEvenSum(num-1);
 }
+//Print pyramid --------------------->
+public static void printPyramid(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+        }
+        for(int k=1;k<=(2*i)-1;k++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+}
 public static void main (String args[]){
-    int res = printEvenSum(8);
-    System.out.println(res);
+    printPyramid(5);
 }
 
 
