@@ -1379,8 +1379,24 @@ public static void printPyramid(int n){
         System.out.println();
     }
 }
+//Second Largest number in Array ------------------------>
+public static void secondHighest(int num[]){
+    int largest = Integer.MIN_VALUE;
+    int secondLargest = Integer.MIN_VALUE;
+    for(int i=0;i<=num.length-1;i++){
+       if(num[i]>largest){
+           secondLargest = largest; //if any new number is bigger than largest so update the secondLargest
+           largest = num[i];        //and assign the new number to largest
+       } else if(num[i]>secondLargest && num[i] < largest ){ //But if any number is not bigger than largest but it can be a second largest number
+           secondLargest = num[i];      //So we check each number and than check it should not be equal to largest
+       }
+    }
+    System.out.println("Largest : "+largest);
+    System.out.println("secondLargest : "+secondLargest);
+}
 public static void main (String args[]){
-    printPyramid(5);
+    int[] num = {14,27,34,49,54,64,47};
+    secondHighest(num);
 }
 
 
