@@ -1394,9 +1394,21 @@ public static void secondHighest(int num[]){
     System.out.println("Largest : "+largest);
     System.out.println("secondLargest : "+secondLargest);
 }
+// Fibonacii series with proper algorithm--------------------->
+public static void fibo(int n){
+    int first = 0;
+    int second = 1;
+    System.out.print(first+",");
+    System.out.print(second+",");
+    for(int i=3;i<=n;i++){
+        int next = first + second;
+        System.out.print(next+",");
+        first = second;
+        second = next;
+    }
+}
 public static void main (String args[]){
-    int[] num = {14,27,34,49,54,64,47};
-    secondHighest(num);
+    fibo(10);
 }
 
 
