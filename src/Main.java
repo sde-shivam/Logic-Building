@@ -1407,8 +1407,23 @@ public static void fibo(int n){
         second = next;
     }
 }
+//find the frequency of characters in a string--------------->
+public static void freqOfChar(String s){
+    s = s.toLowerCase();
+    int[] freq = new int[128];
+    for(int i=0;i<s.length();i++){
+          char ch = s.charAt(i);
+          freq[ch]++;
+    }
+    for(int i=0;i<freq.length;i++){
+        if(freq[i]>0){
+            System.out.println((char)i +":"+ freq[i]);
+        }
+
+    }
+}
 public static void main (String args[]){
-    fibo(10);
+    freqOfChar("shivvaram");
 }
 
 
