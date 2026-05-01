@@ -1422,7 +1422,7 @@ public static void freqOfChar(String s){
 
     }
 }
-//Bubble shorting--------------------->
+//Bubble sorting--------------------->
 public static void bubble(int[]arr){
     int a = arr.length;
     for(int i=0;i<a;i++){
@@ -1438,8 +1438,15 @@ public static void bubble(int[]arr){
         System.out.print(k+",");
     }
 }
+//Power of number using recursion--------------------->
+public static int powOfNum(int num,int pow){
+    if(pow==0)
+        return 1;
+    else return num * powOfNum(num,pow-1);
+}
 public static void main (String args[]){
-    bubble(new int[]{4, 2, 6, 1, 9,0});
+   int res = powOfNum(5,4);
+    System.out.print(res);
 }
 
 
