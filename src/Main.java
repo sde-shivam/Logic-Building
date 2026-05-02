@@ -1440,13 +1440,17 @@ public static void bubble(int[]arr){
 }
 //Power of number using recursion--------------------->
 public static int powOfNum(int num,int pow){
-    if(pow==0)
-        return 1;
+    if(pow==0) return 1;
     else return num * powOfNum(num,pow-1);
 }
+// Calculate profit % -------------------->
+public static void profitPer(int cp,int sp){
+    int profit = sp-cp;
+    double profitPer = ((double)profit/cp)*100;
+    System.out.print(profitPer+" %");
+}
 public static void main (String args[]){
-   int res = powOfNum(5,4);
-    System.out.print(res);
+    profitPer(10,12);
 }
 
 
