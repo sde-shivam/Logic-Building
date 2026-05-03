@@ -1455,9 +1455,15 @@ public static int nthFiboNumber(int num){
     if(num==1) return 1;
     return nthFiboNumber(num-1) + nthFiboNumber(num-2);
 }
+// Find the series of fibonacii n numbers using recursion------------->
+public static void fiboNumSeries(int num,int a,int b){
+    if(num==0) return;
+    System.out.print(a+",");
+    fiboNumSeries(num-1,b,a+b);
+}
 public static void main (String args[]){
-    int res = nthFiboNumber(3);
-    System.out.print(res);
+    fiboNumSeries(10,0,1);
+
 }
 
 
