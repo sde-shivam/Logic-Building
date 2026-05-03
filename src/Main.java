@@ -1449,8 +1449,15 @@ public static void profitPer(int cp,int sp){
     double profitPer = ((double)profit/cp)*100;
     System.out.print(profitPer+" %");
 }
+// Find nth fibonacii number recursively--------------------->
+public static int nthFiboNumber(int num){
+    if(num==0) return 0;
+    if(num==1) return 1;
+    return nthFiboNumber(num-1) + nthFiboNumber(num-2);
+}
 public static void main (String args[]){
-    profitPer(10,12);
+    int res = nthFiboNumber(3);
+    System.out.print(res);
 }
 
 
