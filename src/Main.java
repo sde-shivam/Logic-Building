@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.String;
 import java.util.Scanner;
 class Main {
 
@@ -1461,8 +1462,22 @@ public static void fiboNumSeries(int num,int a,int b){
     System.out.print(a+",");
     fiboNumSeries(num-1,b,a+b);
 }
+//Non Repeating character in a string ---------------------->
+public static void nonRepeatingChar(String str){
+    for(int i=0;i<str.length();i++){
+        boolean isRepeting = false;
+        for(int j=0;j<str.length();j++){
+            if(i!=j && str.charAt(i)==str.charAt(j)){
+                isRepeting = true;
+            }
+        }
+        if(!isRepeting){
+            System.out.print(str.charAt(i));
+        }
+    }
+}
 public static void main (String args[]){
-    fiboNumSeries(10,0,1);
+    nonRepeatingChar("msohihdesdeio");
 
 }
 
