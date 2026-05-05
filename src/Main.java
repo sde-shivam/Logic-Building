@@ -1476,8 +1476,26 @@ public static void nonRepeatingChar(String str){
         }
     }
 }
+//Sift Zeroes in Last position---------------->
+public static void siftZeroesInLast(int[] num){
+    int index=0;
+    for(int i=0;i<num.length;i++){
+        if(num[i]!=0){
+            num[index]=num[i];
+            index++;
+        }
+    }
+    while(index<num.length){
+            num[index]=0;
+            index++;
+    }
+    for(int i :num){
+        System.out.print(i);
+    }
+}
 public static void main (String args[]){
-    nonRepeatingChar("msohihdesdeio");
+    int [] num={2,4,0,3,0,2,6,7};
+    siftZeroesInLast(num);
 
 }
 
