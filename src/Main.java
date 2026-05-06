@@ -1500,10 +1500,18 @@ public static int sumOfDigit(int num){
     sum += num % 10;
     num=num/10;
     return sumOfDigit(num) + sum;
-
 }
+//count the number of digit recursively--------------------->
+public static int countOfDigit(int num){
+    int count=0;
+    if(num==0) return 0;
+    num=num/10;
+    count++;
+    return countOfDigit(num) + count;
+}
+
 public static void main (String args[]){
-    int res = sumOfDigit(564);
+    int res = countOfDigit(56432456);
     System.out.print(res);
 
 }
