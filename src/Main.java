@@ -1493,9 +1493,18 @@ public static void siftZeroesInLast(int[] num){
         System.out.print(i);
     }
 }
+// Sum of digit recursively------------------>
+public static int sumOfDigit(int num){
+    int sum=0;
+    if(num==0) return 0;
+    sum += num % 10;
+    num=num/10;
+    return sumOfDigit(num) + sum;
+
+}
 public static void main (String args[]){
-    int [] num={2,4,0,3,0,2,6,7};
-    siftZeroesInLast(num);
+    int res = sumOfDigit(564);
+    System.out.print(res);
 
 }
 
