@@ -1509,11 +1509,17 @@ public static int countOfDigit(int num){
     count++;
     return countOfDigit(num) + count;
 }
-
+//Reverse a number recursively------------------>
+public static int reverseNumber(int num,int rev){
+    if(num==0) return rev;
+    int lastDigit = num % 10;
+    rev = rev * 10 + lastDigit;
+    num = num/10;
+    return reverseNumber(num,rev);
+}
 public static void main (String args[]){
-    int res = countOfDigit(56432456);
+    int res = reverseNumber(123423456,0);
     System.out.print(res);
-
 }
 
 
